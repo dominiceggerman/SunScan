@@ -1,0 +1,28 @@
+/* Search bar styling */
+
+/* Search section */
+.search {
+	overflow: hidden;
+	background-color: rgb(255, 255, 255);
+}
+/* Search div */
+.search .search-container {
+	float: left;
+}
+/* Search button and hover */
+.search .search-container button {
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 2px;
+	background: url(images/glyphicons-28-search.png);
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.search .search-container button:hover {
+	background: #ccc;
+}
+/* Search text */
+

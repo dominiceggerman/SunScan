@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="SunScan Weather Application to find the weather forcast in a city">
+	<title>SunScanWeather App</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header role="banner">
+    <section class="header">
+        <h1 class="title">
+            SunScan
+        </h1>>
+    </section>
+    </header>
+    <section class="search">
+        <div class="search-container">
+            <form>  <!-- some sort of action attribute? -->
+                <button type="submit"><i class="glyphicon glyphicon-search"></i>></button>
+                <input type="text" placeholder="Search for a city..." name="Search">
+            </form>
+        </div>
+    </section>
+</body>
+</html>
