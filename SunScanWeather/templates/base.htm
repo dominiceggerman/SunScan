@@ -15,14 +15,31 @@
             SunScan
         </h1>
     </section>
-    <div class="search">
-        <div class="search-container">
-            <form>  <!-- some sort of action attribute? -->
-                <input type="submit" id="icon"> <!-- Change this for search icon -->
-                <input type="text" placeholder="Search for a city..." name="Search">
-            </form>
+    <section>
+        <div class="search"> <!-- class = container?? -->
+            <div class="search-container">
+                <form>  <!-- some sort of action attribute? -->
+                    <button type="submit"><img src="{% static 'images/glyphicons-28-search.png' %}" class="icon"></button>
+                    <input type="text" placeholder="Search for a city..." name="Search">
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="weather-tile">
+                {{ city_weather.city }}
+                <div class="icon">
+                    <figure class="50x50-icon">
+                        <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
+                    </figure>
+                </div>
+                <div class="temp">
+                    {{ city_weather.temperature }}
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
     </footer>
 </body>
