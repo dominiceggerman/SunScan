@@ -1,49 +1,69 @@
 <!DOCTYPE HTML>
+
 {% load static %}
+
 <html lang="en">
+
 <head>
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta name="SunScan Weather Application to find the weather forcast in a city">
+    <!-- Title -->
 	<title>SunScanWeather App</title>
+    <!-- Links -->
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
+
     <header role="banner">
-    <div class="SunScan-header">
+    <div class="SS-header">
         <!-- div class top banner -->
-        <img src="{% static 'images/SunScan-logo.png' %}">
-        <h1 class="title">
-            SunScan
-        </h1>
+        <img class="SS-logo" src="{% static 'images/SunScan-logo.png' %}">
+        <h1 class="title"> SunScan </h1>
+        <h2 class="sub-title"> A Django Weather Application utilizing the Open Weather Map API </h2>
+
+        <!-- Your location? -->
+
+        <!-- Under banner for nav? -->
         <!-- div class nav-->
             <!-- ul class="nav-set" - list and then format-->
     </div>
-    <section>
-        <div class="search"> <!-- class = container?? -->
-            <div class="search-container">
+    </header>
+
+    <main>
+        <!-- Container for the search button and bar -->
+        <section class="search-container">
+            <div class="search">
                 <form>  <!-- some sort of action attribute? -->
-                    <button type="submit"><img src="{% static 'images/glyphicons-28-search.png' %}" class="icon"></button>
-                    <input type="text" placeholder="Search for a city..." name="Search">
+                    <button type="submit"><img src="{% static 'images/glyphicons-28-search.png' %}" id="search-icon"></button>
+                    <input type="text" placeholder="Search for a city..." name="Search" id="search-bar">
                 </form>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="weather-tile">
-                {{ city_weather.city }}
-                <div class="icon">
-                    <figure class="50x50-icon">
-                        <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
-                    </figure>
-                </div>
-                <div class="temp">
-                    {{ city_weather.temperature }}
+        </section>
+
+        <!-- Weather tile -->
+        <section>
+            <div class="container">
+                <div class="weather-tile">
+                    {{ city_weather.city }}
+                    <div class="icon">
+                        <figure class="50x50-icon">
+                            <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="temp">
+                        {{ city_weather.temperature }}
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
     <footer class="footer">
     </footer>
+
 </body>
+
 </html>
