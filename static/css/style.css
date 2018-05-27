@@ -6,8 +6,16 @@ body {
 	font-family: "Aleo Light", "Georgia", serif;
 }
 
-main {
-	background: #f5993d;
+/*main {???}*/
+
+section {
+    background: #f5993d;
+    margin: 2.5%;
+}
+
+footer {
+    background: #f5993d;
+    margin: 2.5%;
 }
 
 
@@ -36,10 +44,13 @@ h2.sub-title {}
 
 /* Logo */
 .SS-logo {
+    /* Position and size */
 	width: 10%;
 	height: auto;
 	margin-left: 1%;
 	margin-top: 1%;
+    /* Presentation */
+    border-radius: 15%;
 }
 
 /* Your location? */
@@ -48,42 +59,60 @@ h2.sub-title {}
 /* -------------
 Search Container
 ------------- */
-/* Container */
+/* Section */
+.search-container {
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Border */
+    border: 3px inset black;
+    border-radius: 10%;
+}
 .search-container .search {
 	overflow: hidden;
-	border-radius: 10%;  /* Rounded corners */
-    padding: 1%; 
-    width: 25%;
-    height: auto; 
+    padding: 1% 0%;
 }
 
 /* Button and icon */
-#icon {
-    /* Color in MS paint? */
-}
+/*#search-icon {???}*/
 .search-container .search button {
 	cursor: pointer;
 	padding: 3%;
+    border-radius: 15%;
 }
 .search-container .search button:hover {
 	background-color: #ccc;
 }
 
 /* Search bar */
+.bar-container {
+    /* Need? */
+    display: inline-block;
+}
 #search-bar {
-	background: #f5993d;             /* Background inside of input */
-	padding: 5% 10%;                 /* Inner padding */
+    font-family: "Concert One", cursive, serif; /* find a search font ?? */
+    font-size: 130%;
+    background: #f5993d;             /* Background inside of input */
+	padding: 3% 5%;                 /* Inner padding */
 	border: none;                    /* Removes boarder */
-	border-bottom: 2px solid black;  /* Adds underscore to search */
 	outline: none;					 /* Removes blue outline on browser */
 }
 #search-bar:hover {
 	background-color: orange;  /* ?? */
     boarder-radius: 10%;
-}
-input[type=text] {
-	font-family: "Concert One", cursive, serif; /* find a search font */
-	font-weight: bold;
+    border-bottom: 2px solid black; /* Adds underscore to search on hover */
 }
 
 
+/* -----------------
+Weather Display Tile
+----------------- */
+.weather-container {
+    display: flex;
+}
+.weather-icon {
+    width: 80%;
+    height: auto;
+}

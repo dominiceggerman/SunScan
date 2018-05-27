@@ -17,12 +17,13 @@
 
 <body>
 
+    <!-- Header -->
     <header role="banner">
     <div class="SS-header">
         <!-- div class top banner -->
         <img class="SS-logo" src="{% static 'images/SunScan-logo.png' %}">
         <h1 class="title"> SunScan </h1>
-        <h2 class="sub-title"> A Django Weather Application utilizing the Open Weather Map API </h2>
+        <h2 class="sub-title"> A Django Web Application utilizing the Open Weather Map API </h2>
 
         <!-- Your location? -->
 
@@ -38,30 +39,42 @@
             <div class="search">
                 <form>  <!-- some sort of action attribute? -->
                     <button type="submit"><img src="{% static 'images/glyphicons-28-search.png' %}" id="search-icon"></button>
-                    <input type="text" placeholder="Search for a city..." name="Search" id="search-bar">
+                    <div class="bar-container">
+                        <input type="text" placeholder="Search for a city..." name="Search" id="search-bar">
+                    </div>
                 </form>
             </div>
         </section>
 
-        <!-- Weather tile -->
+        <!-- Weather tiles -->
         <section>
-            <div class="container">
-                <div class="weather-tile">
+            <!-- Container for weather tile -->
+            <div class="weather-container">
+                <figure>
+                    <img class="weather-icon" src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
+                </figure>
+                <div class="city-name">
                     {{ city_weather.city }}
-                    <div class="icon">
-                        <figure class="50x50-icon">
-                            <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
-                        </figure>
-                    </div>
-                    <div class="temp">
-                        {{ city_weather.temperature }}
-                    </div>
+                </div>
+                <div class="temp">
+                    {{ city_weather.temperature }}
                 </div>
             </div>
+
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- // Footer & contact info -->
+    <footer>
+        <div class="content-wrap">
+            <div class="designer">
+                This application was designed by Dominic Eggerman
+                <div class="designer-links">
+                    Link to my website...
+                    <a href="www.linkedin.com/in/dominiceggerman/">LinkdIn</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>
