@@ -20,4 +20,4 @@ def index(request):
 
     context = {'city_weather': city_weather}
 
-    return render(request, 'base.htm', context)
+    return render(request, 'index.html', context)

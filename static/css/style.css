@@ -1,3 +1,12 @@
+/* ----------
+Global styles
+---------- */
+
+body {
+	background-color: #383838;
+	font-family: "Aleo Light", "Georgia", serif;
+}
+
 /** Header **/
 .title {
 	background-color: #f5993d;
