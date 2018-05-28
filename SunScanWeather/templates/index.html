@@ -37,10 +37,14 @@
         <!-- Container for the search button and bar -->
         <section class="search-container">
             <div class="search">
-                <form>  <!-- some sort of action attribute? -->
+                <form method="POST">  <!-- some sort of action attribute? -->
+                    {% csrf_token %}
                     <button type="submit"><img src="{% static 'images/glyphicons-28-search.png' %}" id="search-icon"></button>
                     <div class="bar-container">
-                        <input type="text" placeholder="Search for a city..." name="Search" id="search-bar">
+                        <!-- Left this to show what's going on -->
+                        <!-- <input type="text" placeholder="Search for a city..."  id="search-bar"> -->
+                        <!-- Input tag in Django searchable form. -->
+                        {{ form.name }}
                     </div>
                 </form>
             </div>
@@ -49,6 +53,7 @@
         <!-- Weather tiles -->
         <section>
             <!-- Container for weather tile -->
+            {% for city_weather in weather_data %}
             <div class="weather-container">
                 <figure>
                     <img class="weather-icon" src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
@@ -57,10 +62,10 @@
                     {{ city_weather.city }}
                 </div>
                 <div class="temp">
-                    {{ city_weather.temperature }}
+                    {{ city_weather.temperature }} &#8457;
                 </div>
             </div>
-
+            {% endfor %}
         </section>
     </main>
 
