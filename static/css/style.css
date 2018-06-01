@@ -1,6 +1,12 @@
 /* ----------
 Global styles
 ---------- */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 body {
 	background-color: #383838;
 	font-family: "Aleo Light", "Georgia", serif;
@@ -26,14 +32,6 @@ Header
 	background-color: #f5993d;
 }
 
-/* Logo */
-.SS-logo {
-	width: 10%;
-	height: auto;
-	margin-left: 1%;
-	margin-top: 1%;
-}
-
 /* Titles */
 h1.title {
 	/*display: inline-block;*/
@@ -50,7 +48,7 @@ h2.sub-title {}
 	margin-left: 1%;
 	margin-top: 1%;
     /* Presentation */
-    border-radius: 15%;
+    border-radius: 50%;
 }
 
 /* Your location? */
@@ -115,4 +113,5 @@ Weather Display Tile
 .weather-icon {
     width: 80%;
     height: auto;
+    border: 1px solid white;
 }
