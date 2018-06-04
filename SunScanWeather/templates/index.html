@@ -5,45 +5,53 @@
 <html lang="en">
 
 <head>
+
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="SunScan Weather Application to find the weather forcast in a city">
+
     <!-- Title -->
-	<title>SunScanWeather App</title>
+    <title>SunScanWeather App</title>
+    
     <!-- Links -->
-    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css''}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <!-- Scripts -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
 </head>
+
 
 <body>
 
     <!-- Header -->
     <header role="banner">
-    <div class="SS-header">
         <!-- div class top banner -->
         <img class="SS-logo" src="{% static 'images/SunScan-logo.png' %}">
         <h1 class="title"> SunScan </h1>
-        <h2 class="sub-title"> A Django Web Application utilizing the Open Weather Map API </h2>
+        <h2 class="sub-title"> A Django Web Application utilizing the Open
+        Weather Map API </h2>
 
         <!-- Your location? -->
 
         <!-- Under banner for nav? -->
         <!-- div class nav-->
             <!-- ul class="nav-set" - list and then format-->
-    </div>
     </header>
 
     <main>
+
         <!-- Container for the search button and bar -->
         <section class="search-container">
             <div class="search">
                 <form method="POST">  <!-- some sort of action attribute? -->
                     {% csrf_token %}
-                    <button type="submit"><img src="{% static 'images/glyphicons-28-search.png' %}" id="search-icon"></button>
+                    <button type="submit"><i title="Search" aria-hidden="true"
+                    class="fas fa-search" role="search-button"></i></button>
                     <div class="bar-container">
-                        <!-- Left this to show what's going on -->
-                        <!-- <input type="text" placeholder="Search for a city..."  id="search-bar"> -->
-                        <!-- Input tag in Django searchable form. -->
+                    <div class="bar-container">
                         {{ form.name }}
                     </div>
                 </form>
@@ -56,7 +64,9 @@
             {% for city_weather in weather_data %}
             <div class="weather-container">
                 <figure>
-                    <img class="weather-icon" src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
+                    <img class="weather-icon"
+                    src="http://openweathermap.org/img/w/{{ city_weather.icon
+                    }}.png" alt="Image">
                 </figure>
                 <div class="city-name">
                     {{ city_weather.city }}
@@ -67,10 +77,12 @@
             </div>
             {% endfor %}
         </section>
+
     </main>
 
     <!-- // Footer & contact info -->
     <footer>
+
         <div class="content-wrap">
             <div class="designer">
                 This application was designed by Dominic Eggerman
@@ -80,6 +92,7 @@
                 </div>
             </div>
         </div>
+
     </footer>
 
 </body>

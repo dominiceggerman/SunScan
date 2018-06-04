@@ -11,27 +11,29 @@ body {
 	background-color: #383838;
 	font-family: "Aleo Light", "Georgia", serif;
 }
-
-/*main {???}*/
-
+header {
+    /* For non-supporters of radial gradients */
+	background: #f5993d;
+	/* Radial grad (just gradients wings since footer is a rectangle) */
+	background: radial-gradient(circle, #f5993d, #383838);
+	width: 100%;
+	text-align: center;
+	background-color: ;
+}
+footer {
+    /* For non-supporters of radial gradients */
+	background: #f5993d;
+	/* Radial grad (just gradients wings since footer is a rectangle) */
+	background: radial-gradient(circle, #f5993d, #383838);
+	width: 100%;
+	text-align: center;
+	background-color: ;
+    margin: 2.5%;
+}
 section {
     background: #f5993d;
     margin: 2.5%;
 }
-
-footer {
-    background: #f5993d;
-    margin: 2.5%;
-}
-
-
-/* ---
-Header
---- */
-.SS-header {
-	background-color: #f5993d;
-}
-
 /* Titles */
 h1.title {
 	/*display: inline-block;*/
@@ -40,7 +42,9 @@ h1.title {
 }
 h2.sub-title {}
 
-/* Logo */
+/* ----
+SS Logo
+---- */
 .SS-logo {
     /* Position and size */
 	width: 10%;
@@ -51,8 +55,9 @@ h2.sub-title {}
     border-radius: 50%;
 }
 
-/* Your location? */
-
+/* -----------
+Your location?
+----------- */
 
 /* -------------
 Search Container
@@ -63,7 +68,6 @@ Search Container
     height: auto;
     margin-left: auto;
     margin-right: auto;
-
     /* Border */
     border: 3px inset black;
     border-radius: 10%;
@@ -72,7 +76,6 @@ Search Container
 	overflow: hidden;
     padding: 1% 0%;
 }
-
 /* Button and icon */
 /*#search-icon {???}*/
 .search-container .search button {
@@ -83,7 +86,6 @@ Search Container
 .search-container .search button:hover {
 	background-color: #ccc;
 }
-
 /* Search bar */
 .bar-container {
     /* Need? */
