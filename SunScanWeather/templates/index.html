@@ -51,7 +51,6 @@
                     <button type="submit"><i title="Search" aria-hidden="true"
                     class="fas fa-search" role="search-button"></i></button>
                     <div class="bar-container">
-                    <div class="bar-container">
                         {{ form.name }}
                     </div>
                 </form>
@@ -65,8 +64,7 @@
             <div class="weather-container">
                 <figure>
                     <img class="weather-icon"
-                    src="http://openweathermap.org/img/w/{{ city_weather.icon
-                    }}.png" alt="Image">
+                    src="http://openweathermap.org/img/w/{{city_weather.icon}}.png" alt="Image">
                 </figure>
                 <div class="city-name">
                     {{ city_weather.city }}
