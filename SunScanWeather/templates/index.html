@@ -46,7 +46,7 @@
         <!-- Container for the search button and bar -->
         <section class="search-container">
             <div class="search">
-                <form method="POST">  <!-- some sort of action attribute? -->
+                <form method="POST">
                     {% csrf_token %}
                     <button type="submit"><i title="Search" aria-hidden="true"
                     class="fas fa-search" role="search-button"></i></button>
@@ -57,21 +57,27 @@
             </div>
         </section>
 
+        <a href="{% url 'removeallcities' %}"><button><i class="fas fa-trash-alt"></i> Remove All Cities </button></a>
+
         <!-- Weather tiles -->
         <section>
             <!-- Container for weather tile -->
             {% for city_weather in weather_data %}
             <div class="weather-container">
+                <!-- Icon -->
                 <figure>
                     <img class="weather-icon"
                     src="http://openweathermap.org/img/w/{{city_weather.icon}}.png" alt="Image">
                 </figure>
+                <!-- City Name -->
                 <div class="city-name">
                     {{ city_weather.city }}
                 </div>
+                <!-- Temperature -->
                 <div class="temp">
                     {{ city_weather.temperature }} &#8457;
                 </div>
+                <!-- Remove city -->
             </div>
             {% endfor %}
         </section>
