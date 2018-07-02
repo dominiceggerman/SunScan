@@ -25,7 +25,7 @@ def index(request):
         # Request from API
         req = requests.get(url.format(city)).json()
 
-        # Pull values we want from API
+        # Pull values from API
         city_weather = {
             "city": city.name,
             "temperature": req["main"]["temp"],
