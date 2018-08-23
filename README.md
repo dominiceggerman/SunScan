@@ -1,1 +1,1 @@
-# SunScan is currently in the initial development phases
+# SunScan is currently in development phase.
